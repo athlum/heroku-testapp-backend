@@ -13,5 +13,7 @@ func main() {
 	root := e.Group("/")
 	new(server.Server).Register(root)
 
-	e.Start("0.0.0.0:80")
+	if err := e.Start("0.0.0.0:80"); err != nil {
+		panic(err)
+	}
 }
