@@ -62,6 +62,12 @@
 			"path": "golang.org/x/sys/unix",
 			"revision": "4910a1d54f876d7b22162a85f4d066d3ee649450",
 			"revisionTime": "2018-08-24T09:55:51Z"
+		},
+		{
+			"checksumSHA1": "c/9peb1GiQuZyiR9WCj3m7kUUnQ=",
+			"path": "gopkg.in/gorp.v2",
+			"revision": "6032c66e0f5f155fd56216ed14cbbdd991034605",
+			"revisionTime": "2018-04-10T15:54:28Z"
 		}
 	],
 	"rootPath": "github.com/athlum/heroku-testapp-backend"
