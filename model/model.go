@@ -24,7 +24,7 @@ func DB() *gorp.DbMap {
 }
 
 func Init() error {
-	d, err := sql.Open("mysql", os.Getenv("CLEARDB_DATABASE_URL"))
+	d, err := sql.Open("mysql", os.Getenv("DB"))
 	if err != nil {
 		panic(err)
 	}
