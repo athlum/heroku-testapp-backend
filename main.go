@@ -13,5 +13,5 @@ func main() {
 	root := e.Group("/")
 	new(server.Server).Register(root)
 
-	e.Start("0.0.0.0:8003")
+	e.Start("0.0.0.0:80")
 }
