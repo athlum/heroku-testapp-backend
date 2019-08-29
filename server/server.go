@@ -24,5 +24,5 @@ func (s *Server) QueryAssets(c echo.Context) error {
 }
 
 func (s *Server) Config(c echo.Context) error {
-	return c.JSONBlob(200, os.Getenv("CONFIG"))
+	return c.JSONBlob(200, []byte(os.Getenv("CONFIG")))
 }
