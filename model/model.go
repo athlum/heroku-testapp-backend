@@ -13,7 +13,7 @@ type User struct {
 	Name string `db:"name" json:"name"`
 }
 
-func (u *User) TableName() string {
+func (u User) TableName() string {
 	return "user"
 }
 
@@ -34,7 +34,7 @@ func Init() error {
 
 	db = &gorp.DbMap{Db: d, Dialect: gorp.MySQLDialect{Engine: "InnoDB", Encoding: "UTF8"}}
 
-	u := &User{}
+	u := User{}
 	db.AddTableWithName(u, u.TableName()).SetKeys(true, "id")
 
 	return db.CreateTablesIfNotExists()
