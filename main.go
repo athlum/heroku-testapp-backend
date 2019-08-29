@@ -5,6 +5,7 @@ import (
 	_ "net/http/pprof"
 	"os"
 
+	"github.com/athlum/heroku-testapp-backend/model"
 	"github.com/athlum/heroku-testapp-backend/server"
 )
 
@@ -20,6 +21,9 @@ func main() {
 	root := e.Group("/")
 	new(server.Server).Register(root)
 
+	if err := model.Init(); err != nil {
+		panic(err)
+	}
 	if err := e.Start("0.0.0.0:" + port); err != nil {
 		panic(err)
 	}
